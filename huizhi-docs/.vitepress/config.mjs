@@ -5,10 +5,10 @@ export default defineConfig({
   title: "Huizhi",
   description: "Docs site for huizhi",
   head: [
-    ['link', { rel: 'icon', href: '/public/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
   themeConfig: {
-    logo: '/public/favicon.ico',
+    logo: '/favicon.ico',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
