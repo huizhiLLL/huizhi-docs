@@ -22,26 +22,66 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Docs', link: '/hzcubing/index' }
+      { text: 'Docs', link: '/about' }
     ],
 
     sidebar: [
-      // 笔记分类
+      {
+        text:'关于本站',
+        link:'/about'
+      },
       {
         text: '会枝 Cubing',
-        collapsed: false,
+        collapsed: true,
         items: [
+          { text: '介绍', link: '/hzcubing/intro' },
           { text: '更新日志', link: '/hzcubing/changelog' }
         ]
       },
-
-      // 示例分类
       {
-        text: 'Examples',
-        collapsed: false,
+        text:'魔方',
+        collapsed: true,
         items: [
-          { text: 'Markdown Examples', link: '/example-docs/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/example-docs/api-examples' },
+          { text: '资源导航' ,
+            link:'/cube/resource-nav'}
+             ,
+            {
+              text: '公式',
+              collapsed: true,
+              items: [
+                { text: '正阶', link: '/cube/algorithm/standard' },
+                { text: '异形', link: '/cube/algorithm/non-standard' },
+                { text: '其他', link: '/cube/algorithm/other' }
+              ]
+            }
+          ]
+      },
+      {
+        text: 'CS',
+        collapsed: true,
+        items: [
+          { text: 'CTF',
+            collapsed: true,
+            items: [
+              { text: '导航', link: '/cs/ctf/ctf-nav' }
+            ]
+          },
+          { text: 'Web',
+            collapsed: true,
+            items: [
+              { text: '前端', link: '/cs/web/frontend' },
+              { text: '后端', link: '/cs/web/backend' },
+              { text: '部署', link: '/cs/web/service' }
+            ]
+           }
+        ]
+      },
+
+      {
+        text: '笔记',
+        collapsed: true,
+        items: [
+          { text: '例子', link: '/notes/example' },
         ]
       },
       
