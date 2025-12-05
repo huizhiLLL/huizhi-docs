@@ -8,6 +8,16 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
   themeConfig: {
+    // Gitalk 配置：请填写你的 GitHub OAuth 与仓库信息
+    gitalk: {
+      clientID: 'Ov23linRmSKvEW9TVAms',
+      clientSecret: 'e36dba98372c0407dfa92f4d14a47b44e8e556ca',
+      repo: 'docs-gitalk',
+      owner: 'huizhiLLL',
+      admin: ['huizhiLLL'],
+      distractionFreeMode: true
+    },
+
     logo: '/favicon.ico',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
