@@ -4,10 +4,45 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Huizhi",
   description: "Docs site for huizhi",
+  lang: 'zh',
+  lastUpdated: true,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
   themeConfig: {
+    lastUpdatedText: '最后更新',
+
+    // 右侧目录配置
+    outline: {
+      level: [2, 4], // 显示 h2 和 h3 标题
+      label: '目录' // 目录标题
+    },
+
+    footer: {
+      message: 'Powered by <a href="https://vitepress.dev" target="_blank">VitePress</a>',
+    },
+
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: {
+            buttonText: 'Search',
+            buttonAriaLabel: '搜索文档'
+          },
+          modal: {
+            noResultsText: '无法找到相关结果',
+            resetButtonTitle: '清除查询条件',
+            footer: {
+              selectText: '选择',
+              navigateText: '切换',
+              closeText: '关闭'
+            }
+          }
+        }
+      }
+    },
+
     // Gitalk 配置：请填写你的 GitHub OAuth 与仓库信息
     gitalk: {
       clientID: 'Ov23linRmSKvEW9TVAms',
@@ -21,8 +56,15 @@ export default defineConfig({
     logo: '/favicon.ico',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Docs', link: '/about' }
+      { text: '主页', link: '/'},
+      { text: '文档',
+        collapsed: false,
+        items: [
+          { text: 'hzcubing', link: '/hzcubing/intro' },
+          { text: '魔方', link: '/cube/resource-nav' },
+          { text: 'CS', link: '/cs/cs-intro-nav' },
+          { text: '笔记', link: '/notes/example' },]
+      }
     ],
 
     sidebar: [

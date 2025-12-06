@@ -8,15 +8,16 @@ hero:
   tagline: Some docs and notes.
   actions:
     - theme: brand
-      text: 会枝 Cubing
-      link: /hzcubing/index
+      text: Documentation
+      link: /about
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: hzcubing
+      link: https://hzcubing.club
+      target: _blank
 
 features:
-  - title: 会枝 Cubing
-    details: 魔方群网站！
+  - title: Feature A
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Feature B
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Feature C
